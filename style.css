@@ -1,0 +1,91 @@
+/* ganral */
+body{
+    background: gold;
+    
+}
+.button1{
+    text-decoration: none;
+    
+}
+.button1:hover{
+    border: 3px red;
+    
+}
+.button2{
+    background-color: white;
+    color: black;
+    border: 2px solid red; /* Green */
+    width: 31%;
+  }
+form{
+    font-size: x-large;
+   width: 50%;
+    left: 50%;
+}
+.fi{
+    background-color: navajowhite;
+    margin-left: center;
+}
+
+/*login page */
+
+div{
+    top: 200px;
+    position: relative;
+    width: 100%;
+    left: 50%;
+}
+input{
+    font-size: x-large;
+    position: relative;
+    width: 30%;
+}
+label{
+    font-size: x-large;
+    position: relative;
+    
+    
+
+}
+.head1{
+    font-size: x-large;
+    position: relative;
+    left: 44px;
+}
+
+
+
+.myButton {
+	background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+.myButton1 {
+    background-color: black;
+    color: black;
+	
+    width: 60%;
+	
+}
+.myButton:hover {
+	background-color: yellow;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton1:active {
+	position:relative;
+	top:1px;
+}
