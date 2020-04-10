@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
-     <div>
     <head>
-        <ul>
-        <title>M W F</title>
-       
-         <link rel="stylesheet" type="text/css" href="style.css" > 
-        
-        <h1>M W F</h1>
-        <h2> WELECOME TO M W F</h2>
-        </ul>
-    
+        <link rel="stylesheet" type="text/css" href="Wajeb/style.css" >  
+       <title> Login</title>
+     <?php
+     session_start();
+     session_unset();
+     session_destroy();
+     ?>
+     <center>
+     <img src="Wajeb/img/6.png"  width="460" height="330">
     </head>
     <body>
-         <button><a class="myButton1"  href="table.php">Order here</a></button><br>
-         <button><a class="button1" href="adduser.php">add new emply</a></button>
-         <button><a class="button1" href="login.php">LOGIN</a></button>
-        
-      
-            
-            
-
-
-        
-     </div>
+     <form action="Wajeb/function/logintest.php"  method="get">
+         <input type="usename" name="n1"  placeholder="User name"><br>
+         
+         <input type="password" name="n2" placeholder="Password" ><br>
+         
+         <button type="submit">Login>>></button>
+         
+     </form>   
+    </center>
     </body>
-</html>
+    </html>
