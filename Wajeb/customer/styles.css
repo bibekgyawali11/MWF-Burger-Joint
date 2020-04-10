@@ -1,0 +1,80 @@
+.logo{
+    margin: 5px;
+    font-family: cursive;
+    font-size: xx-large;
+    text-align: center;
+    justify-content: center;
+}
+.dashboard {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+grid-auto-rows: 94px;
+grid-gap: 20px;
+border: 2px solid red;
+margin-top: 50px;
+margin-left: 100px;
+margin-right: 100px;
+padding-top: 50px;
+padding-bottom: 50px;
+text-align:center;
+}
+
+.menu-dashboard {
+    left: 70px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid black;
+    text-align:center;
+    vertical-align:center;
+    position: relative;
+}
+
+.pay-dashboard{
+    right: -40px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid black;
+    text-align:center;
+    position:relative;
+}
+
+.kids-dashboard{
+        right: -40px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border: 2px solid black;
+        text-align:center;
+        position:relative;
+    }
+
+.help-dashboard{
+        left: 70px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border: 2px solid black;
+        text-align:center;
+        position:relative;
+    }
+    .refill-dashboard{
+        left: 70px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        border: 2px solid black;
+        text-align:center;
+        position:relative;
+    }
