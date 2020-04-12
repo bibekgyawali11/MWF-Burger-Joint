@@ -154,14 +154,42 @@ body {
  
   
 <?php
-header("Refresh: 03");
-   include ('../connect.php');
+	header("Refresh: 03");
+	include ('../connect.php');
+  		
+		// Bikesh update start
+		session_start();
+        $n1=$_SESSION['username'];
+
+		//get session id
+		$session_id=session_id();
+		
+		//display session start time
+		$_SESSION['str_time'] = time();
+		if (isset($_SESSION['str_time']))
+		{
+			// get login time
+			$start_time = $_SESSION['str_time'];
+			//echo $start_time;
+			
+			// Query to update kitchenstaff_hours table 
+			$sqlStartTime= "INSERT INTO kitchenstaff_hours (sessionID,StaffID, start_time) VALUES ('$session_id','$n1','$start_time')";
+			$sqlInputStartTime = $conn->query($sqlStartTime);
+		}
+		
+		// Convert login timestamp to datetime format
+		$startDateTime = date('Y-m-d H:i:s', $start_time);
+		
+		// Query to update kitchenstaff_hours table by login date time 
+		$sqlStartDateTimeFormat = "UPDATE kitchenstaff_hours SET start_date_time='$startDateTime' WHERE sessionId='$session_id'";
+		$sqlUpdateStartDateTime = $conn->query($sqlStartDateTimeFormat);
+		
+        // Bikesh update end
+		
+		$sql="SELECT * FROM order_food where status='inkitchen'";
   
-   
-   $sql="SELECT * FROM order_food where status='inkitchen'";
-  
-   $result = $conn->query($sql);
-   while($row = $result->fetch_assoc()) {
+		$result = $conn->query($sql);
+		while($row = $result->fetch_assoc()) {
        
    ?>
    
@@ -217,7 +245,7 @@ header("Refresh: 03");
 
      </form>
 		</div>
-    <div class="logOut" style="position: absolute; left: 0px; bottom: 0px;" ><button><a href= "/Wajeb/login.php">
+    <div class="logOut" style="position: absolute; left: 0px; bottom: 0px;" ><button><a href= "/Wajeb/logout.php"> <!-- Bikesh update -->
                 <img src="logOut.png"  width="150" height="100" type="submit"></a></button>
     </div>
   </div>
